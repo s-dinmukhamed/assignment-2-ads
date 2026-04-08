@@ -1,3 +1,5 @@
+import javax.sound.sampled.Line;
+import java.nio.channels.Pipe;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -22,6 +24,10 @@ public class main {
                     searchAccount(accounts,scan);
                     break;
                 case 4:
+                    deposit(accounts, scan);
+                case 5:
+                    withdraw(accounts, scan);
+                case 6:
                     System.out.println("Thanks for using my program");
                     scan.close();
                     return;
@@ -49,7 +55,9 @@ public class main {
         System.out.println("1. Add new account");
         System.out.println("2. Display all accounts");
         System.out.println("3. Search account by username");
-        System.out.println("4. Exit");
+        System.out.println("4. Deposit");
+        System.out.println("5. Withdraw");
+        System.out.println("6. Exit");
         System.out.println("Enter your choice: ");
     }
 
@@ -88,5 +96,45 @@ public class main {
             System.out.println("Account not found");
         }
 
+
+    }
+
+    public static void deposit(LinkedList<BankAccount> accounts, Scanner scan){
+        System.out.println("Enter username: ");
+        String username = scan.nextLine();
+
+        for(BankAccount acc : accounts){
+            if(username.equals(acc.getUsername())){
+                System.out.println("Deposit: ");
+                double amount = scan.nextDouble();
+                scan.nextLine();
+
+                acc.deposit(amount);
+                System.out.println("New balance: " + acc.getBalance());
+                return;
+            }
+        }
+        System.out.println("Account not found");
+    }
+
+    public static void withdraw(LinkedList<BankAccount> accounts, Scanner scan){
+        System.out.println("Enter username: ");
+        String username = scan.nextLine();
+
+        for (BankAccount acc : accounts){
+            if(username.equals(acc.getUsername())){
+                System.out.println("Withdraw: ");
+                double amount = scan.nextDouble();
+                scan.nextLine();
+
+                if(acc.withdraw(amount)){
+                    System.out.println("New balance: " + acc.getBalance());
+                }else{
+                    System.out.println("invalid balance");
+                }
+                return;
+            }
+        }
+        System.out.println("Account not found");
     }
 }
