@@ -10,6 +10,22 @@ TASK 1
 <img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 20 17 41" src="https://github.com/user-attachments/assets/1692a30c-762b-4980-b3fc-fc6e0c17c9e1" />
 <img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 20 18 08" src="https://github.com/user-attachments/assets/16dfca30-2ecc-4df9-b73c-63c454ff15cb" />
 
-
-
 This program was created in Java to manage bank accounts using a LinkedList. A class called BankAccount was created with three fields: accountNumber, username, and balance. The program allows the user to add a new account, display all accounts, and search for an account by username. A LinkedList is used to store all account objects. The Main class contains the menu and the methods for adding, displaying, and searching accounts. This task shows the use of classes, objects, methods, user input, and LinkedList in Java. The program works correctly and stores bank account information in a dynamic list.
+
+
+TASK 2
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 21 44 31" src="https://github.com/user-attachments/assets/bd402382-358e-4b0f-834c-03b77604819f" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 21 46 49" src="https://github.com/user-attachments/assets/1b35a3c4-2601-4081-a33c-e9b91e23daa9" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 21 47 18" src="https://github.com/user-attachments/assets/0828f8f9-1464-4c72-a9d3-5b4d474b38f8" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 21 47 48" src="https://github.com/user-attachments/assets/79b2cc90-9633-44b8-be6f-eadd5c9fa244" />
+
+This program was extended to support deposit and withdraw operations for bank accounts stored in a LinkedList. The user can enter a username, choose to deposit or withdraw money, and the program updates the balance of the matching account inside the LinkedList. Deposit adds money to the current balance, while withdraw subtracts money if there are enough funds in the account. If the balance is not sufficient, the program shows an error message. This task demonstrates how to modify object data stored in a LinkedList and how to manage account balances using methods in Java.
+
+TASK 3 
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 39 33" src="https://github.com/user-attachments/assets/dba91d1c-cc62-4fa4-a43b-2537fc92b89a" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 40 09" src="https://github.com/user-attachments/assets/555c2331-6e7f-4a92-9280-e7019d08bff8" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 40 44" src="https://github.com/user-attachments/assets/b008f7b8-cbbf-4549-a093-1fe9ac9ad504" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 41 09" src="https://github.com/user-attachments/assets/bd6071b9-0704-4d9c-81dd-c9f3128a135f" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 41 42" src="https://github.com/user-attachments/assets/1f28403a-5193-480c-94ad-ce09328054cd" />
+<img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 42 12" src="https://github.com/user-attachments/assets/bcd5e03c-ecfa-4e90-8777-bf69259f14b2" />
+This program was extended by adding transaction history using a Stack in Java. A new class called TransactionHistory was created to store transactions in Stack<String> format. The program saves actions such as deposit, withdraw, and bill payment as text records. It also allows the user to view the last transaction using peek(), remove the last transaction using pop(), and display all stored transactions. This task demonstrates the use of the stack data structure and the LIFO principle, where the last added transaction is the first one removed.
