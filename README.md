@@ -44,3 +44,8 @@ TASK 5
 <img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 01 41" src="https://github.com/user-attachments/assets/5adabc31-798a-495f-9b99-eeaa91dd87a1" />
 <img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 01 48" src="https://github.com/user-attachments/assets/1db0c327-6fad-4e74-8474-ce90a113d95a" />
 This program was extended by adding an account opening request queue to simulate the real banking workflow. A new class called AccountRequestQueue was created, where Queue<BankAccount> is implemented using LinkedList. The user can submit a new account request, and the admin can process the next request in the queue. When a request is processed, the account is removed from the queue and added to the main LinkedList of bank accounts. The program can also display all pending account requests. This task demonstrates the FIFO principle, where the first request added to the queue is the first one processed.
+
+-PART 2- 
+TASK 6
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 14 58" src="https://github.com/user-attachments/assets/ed87bfd6-dd02-4b51-a46b-12768c6386ed" />
+This program demonstrates the use of an array as a physical data structure in Java. A BankAccount[3] array was created to store exactly three predefined bank account objects. Each element of the array contains one BankAccount with its account number, username, and balance. After storing the three accounts, the program prints all of them using a loop. This task shows how arrays work with fixed size and how objects can be stored and accessed by index in Java.
