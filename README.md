@@ -37,3 +37,10 @@ TASK 4
 <img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 20 25 53" src="https://github.com/user-attachments/assets/83950a23-c57e-4e70-919a-de4e7de11bad" />
 <img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 20 26 00" src="https://github.com/user-attachments/assets/8daff416-4b22-4544-96ed-716e28a9bb6e" />
 This program was extended by adding a bill payment queue using the Queue data structure in Java. A new class called BillQueue was created, where Queue<String> is implemented using LinkedList. The program allows the user to add bill payment requests, process the next bill in the queue, and display all bills waiting in the queue. This task demonstrates the FIFO principle, where the first bill added to the queue is the first one processed. It also shows how queue operations can be organized in a separate class and used together with the main banking system.
+
+TASK 5
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 01 06" src="https://github.com/user-attachments/assets/0410c739-7318-4f6d-8e9f-aa13ba23d9d7" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 01 17" src="https://github.com/user-attachments/assets/9884506a-4083-45ab-80a1-e9ea655c60dc" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 01 41" src="https://github.com/user-attachments/assets/5adabc31-798a-495f-9b99-eeaa91dd87a1" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 21 01 48" src="https://github.com/user-attachments/assets/1db0c327-6fad-4e74-8474-ce90a113d95a" />
+This program was extended by adding an account opening request queue to simulate the real banking workflow. A new class called AccountRequestQueue was created, where Queue<BankAccount> is implemented using LinkedList. The user can submit a new account request, and the admin can process the next request in the queue. When a request is processed, the account is removed from the queue and added to the main LinkedList of bank accounts. The program can also display all pending account requests. This task demonstrates the FIFO principle, where the first request added to the queue is the first one processed.
