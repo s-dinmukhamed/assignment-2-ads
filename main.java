@@ -7,6 +7,7 @@ public class main {
         LinkedList<BankAccount> accounts = new LinkedList<>();
         TransactionHistory history = new TransactionHistory();
         BillQueue billQueue = new BillQueue();
+        AccountRequestQueue requestQueue = new AccountRequestQueue();
 
         while (true){
             menu();
@@ -51,6 +52,15 @@ public class main {
                     billQueue.displayBills();
                     break;
                 case 13:
+                    addAccountRequest(scan, requestQueue);
+                    break;
+                case 14:
+                    requestQueue.processRequest(accounts);
+                    break;
+                case 15:
+                    requestQueue.displayRequests();
+                    break;
+                case 16:
                     System.out.println("Thanks for using my program");
                     scan.close();
                     return;
@@ -88,7 +98,10 @@ public class main {
         System.out.println("10. Add Bill payment request");
         System.out.println("11. Process next Bill payment");
         System.out.println("12. Display Bill queue");
-        System.out.println("13. Exit");
+        System.out.println("13. Add account opening request");
+        System.out.println("14. Process account opening request");
+        System.out.println("15. Display pending account requests");
+        System.out.println("16. Exit");
         System.out.println("Enter your choice: ");
     }
 
@@ -197,5 +210,21 @@ public class main {
         System.out.println("Enter bill name: ");
         String billname = scan.nextLine();
         billQueue.addBill(billname);
+    }
+
+    public static void addAccountRequest(Scanner scan, AccountRequestQueue requestQueue){
+        System.out.print("Enter account id: ");
+        int accountNumber = scan.nextInt();
+        scan.nextLine();
+
+        System.out.print("Enter account username: ");
+        String username = scan.nextLine();
+
+        System.out.print("Enter account balance: ");
+        double balance = scan.nextDouble();
+        scan.nextLine();
+
+        BankAccount account = new BankAccount(accountNumber, username, balance);
+        requestQueue.addRequest(account);
     }
 }
