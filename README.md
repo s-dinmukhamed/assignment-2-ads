@@ -29,3 +29,11 @@ TASK 3
 <img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 41 42" src="https://github.com/user-attachments/assets/1f28403a-5193-480c-94ad-ce09328054cd" />
 <img width="1920" height="1080" alt="Снимок экрана 2026-04-08 в 23 42 12" src="https://github.com/user-attachments/assets/bcd5e03c-ecfa-4e90-8777-bf69259f14b2" />
 This program was extended by adding transaction history using a Stack in Java. A new class called TransactionHistory was created to store transactions in Stack<String> format. The program saves actions such as deposit, withdraw, and bill payment as text records. It also allows the user to view the last transaction using peek(), remove the last transaction using pop(), and display all stored transactions. This task demonstrates the use of the stack data structure and the LIFO principle, where the last added transaction is the first one removed.
+
+TASK 4 
+<img width="1470" height="956" alt="image" src="https://github.com/user-attachments/assets/fa2bb7b4-309e-4122-97fd-23369d08a3a3" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 20 25 33" src="https://github.com/user-attachments/assets/387dd43e-8491-43e5-96ef-072d1cba4425" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 20 25 46" src="https://github.com/user-attachments/assets/2810b7e8-b2f4-4d89-bf93-e0511d702b88" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 20 25 53" src="https://github.com/user-attachments/assets/83950a23-c57e-4e70-919a-de4e7de11bad" />
+<img width="1470" height="956" alt="Снимок экрана 2026-04-09 в 20 26 00" src="https://github.com/user-attachments/assets/8daff416-4b22-4544-96ed-716e28a9bb6e" />
+This program was extended by adding a bill payment queue using the Queue data structure in Java. A new class called BillQueue was created, where Queue<String> is implemented using LinkedList. The program allows the user to add bill payment requests, process the next bill in the queue, and display all bills waiting in the queue. This task demonstrates the FIFO principle, where the first bill added to the queue is the first one processed. It also shows how queue operations can be organized in a separate class and used together with the main banking system.
