@@ -6,6 +6,7 @@ public class main {
         Scanner scan = new Scanner(System.in);
         LinkedList<BankAccount> accounts = new LinkedList<>();
         TransactionHistory history = new TransactionHistory();
+        BillQueue billQueue = new BillQueue();
 
         while (true){
             menu();
@@ -41,6 +42,15 @@ public class main {
                     history.displayTransactions();
                     break;
                 case 10:
+                    addBillRequest(scan, billQueue);
+                    break;
+                case 11:
+                    billQueue.NextBill();
+                    break;
+                case 12:
+                    billQueue.displayBills();
+                    break;
+                case 13:
                     System.out.println("Thanks for using my program");
                     scan.close();
                     return;
@@ -75,7 +85,10 @@ public class main {
         System.out.println("7. Last Transaction");
         System.out.println("8. Cancel Last Transaction");
         System.out.println("9. Display Transactions");
-        System.out.println("10. Exit");
+        System.out.println("10. Add Bill payment request");
+        System.out.println("11. Process next Bill payment");
+        System.out.println("12. Display Bill queue");
+        System.out.println("13. Exit");
         System.out.println("Enter your choice: ");
     }
 
@@ -178,5 +191,11 @@ public class main {
             }
         }
         System.out.println("Account not found");
+    }
+
+    public static void addBillRequest(Scanner scan, BillQueue billQueue){
+        System.out.println("Enter bill name: ");
+        String billname = scan.nextLine();
+        billQueue.addBill(billname);
     }
 }
