@@ -1,3 +1,5 @@
+package assignment2.structures;
+
 import java.util.Stack;
 
 public class TransactionHistory {

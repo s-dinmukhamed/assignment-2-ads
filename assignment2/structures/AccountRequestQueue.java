@@ -1,3 +1,7 @@
+package assignment2.structures;
+
+import assignment2.*;
+import assignment2.structures.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -13,12 +17,12 @@ public class AccountRequestQueue {
         System.out.println("Account request: " + account.getUsername());
     }
 
-    public void processRequest(LinkedList<BankAccount> accounts){
+    public void processRequest(AccountManager accountManager){
         if(accountRequests.isEmpty()){
             System.out.println("No pending account requests");
         }else{
-            BankAccount account = accountRequests.poll();
-            accounts.add(account);
+            assignment2.BankAccount account = accountRequests.poll();
+            accountManager.addAccount(account);
             System.out.println("Account request processed: " + account.getUsername());
         }
     }

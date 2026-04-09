@@ -1,3 +1,5 @@
+package assignment2;
+
 public class BankAccount {
     int AccountID;
     String username;
@@ -29,6 +31,12 @@ public class BankAccount {
             return true;
         }
         return false;
+    }
+
+    public void displayInfo() {
+        System.out.println("Account ID: " + getAccountID());
+        System.out.println("Username: " + getUsername());
+        System.out.println("Balance: " + getBalance());
     }
 
 }
