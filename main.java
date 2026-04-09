@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args){
@@ -61,6 +62,9 @@ public class main {
                     requestQueue.displayRequests();
                     break;
                 case 16:
+                    displayArray();
+                    break;
+                case 17:
                     System.out.println("Thanks for using my program");
                     scan.close();
                     return;
@@ -101,7 +105,8 @@ public class main {
         System.out.println("13. Add account opening request");
         System.out.println("14. Process account opening request");
         System.out.println("15. Display pending account requests");
-        System.out.println("16. Exit");
+        System.out.println("16. Show array");
+        System.out.println("17. Exit");
         System.out.println("Enter your choice: ");
     }
 
@@ -226,5 +231,18 @@ public class main {
 
         BankAccount account = new BankAccount(accountNumber, username, balance);
         requestQueue.addRequest(account);
+    }
+
+    public static void displayArray(){
+        BankAccount[] accounts = new BankAccount[3];
+
+        accounts[0] = new BankAccount (1, "Dimash", 4000);
+        accounts[1] = new BankAccount(2, "Dinmukhamed", 3000);
+        accounts[2] = new BankAccount(3,"Mubtal", 5000);
+
+        System.out.println("Accounts: ");
+        for(int i = 0; i < accounts.length; i++){
+            System.out.println(accounts[i].getAccountID() + ". " + accounts[i].getUsername() + " - Balance: " + accounts[i].getBalance());
+        }
     }
 }
